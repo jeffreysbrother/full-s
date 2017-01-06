@@ -4,10 +4,13 @@ import Header from './Header';
 
 // a react component is simply a function
 class App extends React.Component {
+  state = {
+    pageHeader: 'Naming Contests'
+  };
   render() {
     return(
       <div className="App">
-        <Header message="Naming Contests" />
+        <Header message={this.state.pageHeader} />
         <div>
           ---
         </div>
