@@ -59,20 +59,35 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	// a react component is simply a function
-	var App = function App(props) {
+	var Header = function Header(_ref) {
+	  var message = _ref.message;
+	
 	  return _react2.default.createElement(
 	    'h2',
-	    null,
-	    props.headerMessage
+	    { className: 'Header text-center' },
+	    message
 	  );
 	};
 	
-	App.propTypes = {
-	  headerMessage: _react2.default.PropTypes.string
+	Header.propTypes = {
+	  message: _react2.default.PropTypes.string
 	};
 	
-	_reactDom2.default.render(_react2.default.createElement(App, { headerMessage: 'props!!!' }), document.getElementById('root'));
+	// a react component is simply a function
+	var App = function App() {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'App' },
+	    _react2.default.createElement(Header, { message: 'Naming Contests' }),
+	    _react2.default.createElement(
+	      'div',
+	      null,
+	      '...'
+	    )
+	  );
+	};
+	
+	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('root'));
 
 /***/ },
 /* 1 */

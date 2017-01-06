@@ -1,20 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// a react component is simply a function
-const App = (props) => {
+const Header = ({ message }) => {
   return(
-    <h2>
-      {props.headerMessage}
+    <h2 className="Header text-center">
+      {message}
     </h2>
   );
 };
 
-App.propTypes = {
-  headerMessage: React.PropTypes.string
+Header.propTypes = {
+  message: React.PropTypes.string
 };
 
+// a react component is simply a function
+const App = () => {
+  return(
+    <div className="App">
+      <Header message="Naming Contests" />
+      <div>
+        ...
+      </div>
+    </div>
+  );
+};
+
+
 ReactDOM.render(
-  <App headerMessage="props!!!" />,
+  <App />,
   document.getElementById('root')
 );
