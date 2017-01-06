@@ -22078,6 +22078,10 @@
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
+	var _ContestPreview = __webpack_require__(/*! ./ContestPreview */ 181);
+	
+	var _ContestPreview2 = _interopRequireDefault(_ContestPreview);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22116,7 +22120,9 @@
 	        _react2.default.createElement(
 	          'div',
 	          null,
-	          '---'
+	          this.props.contests.map(function (contest) {
+	            return _react2.default.createElement(_ContestPreview2.default, contest);
+	          })
 	        )
 	      );
 	    }
@@ -22193,6 +22199,44 @@
 			}
 		]
 	};
+
+/***/ },
+/* 181 */
+/*!******************************************!*\
+  !*** ./src/components/ContestPreview.js ***!
+  \******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var ContestPreview = function ContestPreview(_ref) {
+	  var contest = _ref.contest;
+	  return _react2.default.createElement(
+	    "div",
+	    { className: "ContestPreview" },
+	    _react2.default.createElement(
+	      "div",
+	      { className: "category-name" },
+	      contest.categoryName
+	    ),
+	    _react2.default.createElement(
+	      "div",
+	      { className: "contest-name" },
+	      contest.contestName
+	    )
+	  );
+	}; // a stateless component
+	exports.default = ContestPreview;
 
 /***/ }
 /******/ ]);
