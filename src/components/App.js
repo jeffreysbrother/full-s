@@ -7,6 +7,7 @@ class App extends React.Component {
   state = {
     pageHeader: 'Naming Contests'
   };
+
   render() {
     return(
       <div className="App">
