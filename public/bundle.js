@@ -59,16 +59,20 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	// ReactDOM.render(
-	//   React.createElement('h2', null, 'Hello React'),
-	//   document.getElementById('root')
-	// );
+	// a react component is simply a function
+	var App = function App(props) {
+	  return _react2.default.createElement(
+	    'h2',
+	    null,
+	    props.headerMessage
+	  );
+	};
 	
-	_reactDom2.default.render(_react2.default.createElement(
-	  'h2',
-	  null,
-	  'Hello React with JSX!'
-	), document.getElementById('root'));
+	App.propTypes = {
+	  headerMessage: _react2.default.PropTypes.string
+	};
+	
+	_reactDom2.default.render(_react2.default.createElement(App, { headerMessage: 'props!!!' }), document.getElementById('root'));
 
 /***/ },
 /* 1 */

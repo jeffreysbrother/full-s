@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// ReactDOM.render(
-//   React.createElement('h2', null, 'Hello React'),
-//   document.getElementById('root')
-// );
+// a react component is simply a function
+const App = (props) => {
+  return(
+    <h2>
+      {props.headerMessage}
+    </h2>
+  );
+};
+
+App.propTypes = {
+  headerMessage: React.PropTypes.string
+};
 
 ReactDOM.render(
-  <h2>Hello React with JSX!</h2>,
+  <App headerMessage="props!!!" />,
   document.getElementById('root')
 );
