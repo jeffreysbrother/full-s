@@ -8,7 +8,7 @@ visit http://localhost:8080, http://localhost:8080/api, or http://localhost:8080
 
 using node.js, Express, EJS, Babel, Webpack, React
 
-###syntax if you're not using state###
+###syntax if you don't need state###
 
 ```js
 const App = () => {
@@ -26,7 +26,7 @@ export default App;
 
 ```
 
-###syntax for stateful components###
+###syntax if you need state or lifecycle methods###
 
 ```js
 class App extends React.Component {
