@@ -17,6 +17,7 @@ class App extends React.Component {
           {this.props.contests.map(contest =>
             <ContestPreview {...contest} />
           )}
+
         </div>
       </div>
     );
